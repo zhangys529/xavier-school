@@ -15,8 +15,8 @@
 
     <modules>
         <module>charles</module>
-        <module>kurt</module>
         <module>logan</module>
+        <module>kurt</module>
         <module>government</module>
         <module>police</module>
         <module>people</module>

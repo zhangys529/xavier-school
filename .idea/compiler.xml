@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="police" />
+        <module name="charles" />
+        <module name="kurt" />
+        <module name="people" />
+        <module name="government" />
+        <module name="logan" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="charles" target="1.8" />
+      <module name="government" target="1.8" />
+      <module name="kurt" target="1.8" />
+      <module name="logan" target="1.8" />
+      <module name="people" target="1.8" />
+      <module name="police" target="1.8" />
+      <module name="x" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="charles" options="-parameters" />
+      <module name="government" options="-parameters" />
+      <module name="kurt" options="-parameters" />
+      <module name="logan" options="-parameters" />
+      <module name="people" options="-parameters" />
+      <module name="police" options="-parameters" />
+    </option>
+  </component>
+</project>

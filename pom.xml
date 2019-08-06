@@ -15,6 +15,7 @@
 
     <modules>
         <module>charles</module>
+        <module>hank</module>
         <module>logan</module>
         <module>kurt</module>
         <module>government</module>

@@ -5,6 +5,10 @@ server:
 spring:
   application:
     name: x-hank
+  security:
+    user:
+      name: x
+      password: 123456
 
 #Eureka 相关配置
 eureka:

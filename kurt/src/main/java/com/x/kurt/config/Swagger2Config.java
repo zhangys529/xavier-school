@@ -1,4 +1,4 @@
-package com.x.police.config;
+package com.x.kurt.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

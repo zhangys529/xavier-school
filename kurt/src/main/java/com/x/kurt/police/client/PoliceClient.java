@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "x-police", fallback = PoliceClientFallback.class)
 public interface PoliceClient {
-    @GetMapping("/obey")
+    @GetMapping("/police/obey")
     String obey(@RequestParam String orders);
 }

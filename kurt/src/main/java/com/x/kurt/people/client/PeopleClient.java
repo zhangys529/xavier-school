@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "x-people", fallback = PeopleClientFallback.class)
 public interface PeopleClient {
-    @GetMapping("/hello")
+    @GetMapping("/people/hello")
     String hello(@RequestParam String name);
 }

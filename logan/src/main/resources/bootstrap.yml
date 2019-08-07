@@ -10,6 +10,17 @@ spring:
       retry:
         # 重试机制开关
         enabled: false
+    gateway:
+      routes:
+        - predicates:
+            - Path=/government/**
+          uri: lb://x-government
+        - predicates:
+            - Path=/police/**
+          uri: lb://x-police
+        - predicates:
+            - Path=/people/**
+          uri: lb://x-people
 
 #Eureka 相关配置
 eureka:
@@ -34,30 +45,3 @@ ribbon:
   MaxAutoRetriesNextServer: 0
   # 对所有操作请求都进行重试
   OkToRetryOnAllOperations: false
-
-zuul:
-  ratelimit:
-    enabled: true
-    behind-proxy: true
-    default-policy:
-      # 在一个单位时间窗口的请求数量
-      limit: 2
-      # 在一个单位时间窗口的请求时间限制
-      quota: 10
-      # 单位时间窗口
-      refresh-interval: 10
-      # 限流方式
-      type:
-        - user
-        - origin
-        - url
-  routes:
-    x-government:
-      path: /government/**
-      serviceId: x-government
-    x-police:
-      path: /police/**
-      serviceId: x-police
-    x-people:
-      path: /people/**
-      serviceId: x-people

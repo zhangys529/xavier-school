@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "x-government", fallback = GovernmentClientFallback.class)
 public interface GovernmentClient {
-    @GetMapping("/arrest")
+    @GetMapping("/government/arrest")
     String arrest(@RequestParam String name);
 }

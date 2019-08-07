@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping
+@RequestMapping("/police")
 public class PoliceController {
     @GetMapping("/obey")
     @ApiOperation(value = "obey")

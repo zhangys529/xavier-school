@@ -21,6 +21,11 @@ spring:
         - predicates:
             - Path=/people/**
           uri: lb://x-people
+      default-filters:
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallback
 
 #Eureka 相关配置
 eureka:

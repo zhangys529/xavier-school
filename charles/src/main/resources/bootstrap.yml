@@ -24,3 +24,12 @@ eureka:
     enable-self-preservation: false
     # 清理间隔（单位毫秒，默认是60*1000）
     eviction-interval-timer-in-ms: 5000
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

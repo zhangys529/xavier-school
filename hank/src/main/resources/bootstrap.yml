@@ -4,11 +4,16 @@ server:
 # 服务名称
 spring:
   application:
-    name: x-hank
+    name: x-hank-admin
   security:
     user:
       name: x
       password: 123456
+logging:
+  path: logs/
+  file: ${logging.path}/x-hank-admin.log
+  level:
+    com.x.hank: debug
 
 #Eureka 相关配置
 eureka:

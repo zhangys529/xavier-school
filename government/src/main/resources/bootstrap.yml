@@ -1,16 +1,18 @@
 # 服务端口号
 server:
-  port: 8770
+  port: 8771
 # 服务名称
 spring:
   application:
-    name: x-government
+    name: government-application
   cloud:
     loadbalancer:
       retry:
         # 重试机制开关
         enabled: false
 logging:
+  path: logs/
+  file: ${logging.path}/government-application.log
   level:
     com.x.government: debug
 

@@ -1,16 +1,18 @@
 # 服务端口号
 server:
-  port: 8771
+  port: 8772
 # 服务名称
 spring:
   application:
-    name: x-police
+    name: police-application
   cloud:
     loadbalancer:
       retry:
         # 重试机制开关
         enabled: false
 logging:
+  path: logs/
+  file: ${logging.path}/police-application.log
   level:
     com.x.police: debug
 

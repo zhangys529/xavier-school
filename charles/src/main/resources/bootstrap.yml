@@ -4,11 +4,16 @@ server:
 # 服务名称
 spring:
   application:
-    name: x-charles
+    name: x-charles-eureka
   security:
     user:
       name: x
       password: 123456
+logging:
+  path: logs/
+  file: ${logging.path}/x-charles-eureka.log
+  level:
+    com.x.charles: debug
 
 #Eureka 相关配置
 eureka:

@@ -1,16 +1,18 @@
 # 服务端口号
 server:
-  port: 8772
+  port: 8773
 # 服务名称
 spring:
   application:
-    name: x-people
+    name: people-application
   cloud:
     loadbalancer:
       retry:
         # 重试机制开关
         enabled: false
 logging:
+  path: logs/
+  file: ${logging.path}/people-application.log
   level:
     com.x.people: debug
 

@@ -4,7 +4,7 @@ server:
 # 服务名称
 spring:
   application:
-    name: x-logan
+    name: x-logan-gateway
   cloud:
     loadbalancer:
       retry:
@@ -14,18 +14,23 @@ spring:
       routes:
         - predicates:
             - Path=/government/**
-          uri: lb://x-government
+          uri: lb://government-application
         - predicates:
             - Path=/police/**
-          uri: lb://x-police
+          uri: lb://police-application
         - predicates:
             - Path=/people/**
-          uri: lb://x-people
+          uri: lb://people-application
       default-filters:
         - name: Hystrix
           args:
             name: fallbackcmd
             fallbackUri: forward:/fallback
+logging:
+  path: logs/
+  file: ${logging.path}/x-logan-gateway.log
+  level:
+    com.x.logan: debug
 
 #Eureka 相关配置
 eureka:

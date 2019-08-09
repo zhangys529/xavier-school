@@ -39,3 +39,12 @@ ribbon:
   MaxAutoRetriesNextServer: 0
   # 对所有操作请求都进行重试
   OkToRetryOnAllOperations: false
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
